@@ -33,6 +33,10 @@ module FactoryGirl
           FactoryGirl.register_trait(Trait.new(name, &block))
         end
 
+        def to_create(&block)
+          FactoryGirl.to_create(&block)
+        end
+
         def self.run(block)
           new.instance_eval(&block)
         end
